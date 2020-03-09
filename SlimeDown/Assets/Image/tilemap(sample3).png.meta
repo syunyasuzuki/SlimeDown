@@ -1,23 +1,24 @@
 fileFormatVersion: 2
-guid: 42beebdc9b9897b4282a7b6d80df9ae0
-timeCreated: 1583456192
+guid: 032186c9c665adc438d412178ffb5298
+timeCreated: 1583718152
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tilemap(sample2) (1)_0
-    21300002: tilemap(sample2) (1)_1
-    21300004: tilemap(sample2) (1)_2
-    21300006: tilemap(sample2) (1)_3
-    21300008: tilemap(sample2) (1)_4
-    21300010: tilemap(sample2) (1)_5
-    21300012: tilemap(sample2) (1)_6
-    21300014: tilemap(sample2) (1)_7
-    21300016: tilemap(sample2) (1)_8
-    21300018: tilemap(sample2) (1)_9
-    21300020: tilemap(sample2) (1)_10
-    21300022: tilemap(sample2) (1)_11
-    21300024: tilemap(sample2) (1)_12
-    21300026: tilemap(sample2) (1)_13
+    21300000: tilemap(sample3)_0
+    21300002: tilemap(sample3)_1
+    21300004: tilemap(sample3)_2
+    21300006: tilemap(sample3)_3
+    21300008: tilemap(sample3)_4
+    21300010: tilemap(sample3)_5
+    21300012: tilemap(sample3)_6
+    21300014: tilemap(sample3)_7
+    21300016: tilemap(sample3)_8
+    21300018: tilemap(sample3)_9
+    21300020: tilemap(sample3)_10
+    21300022: tilemap(sample3)_11
+    21300024: tilemap(sample3)_12
+    21300026: tilemap(sample3)_13
+    21300028: tilemap(sample3)_14
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -45,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -125,197 +126,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tilemap(sample2) (1)_0
+      name: tilemap(sample3)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_1
       rect:
         serializedVersion: 2
         x: 25
-        y: 450
+        y: 50
         width: 25
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilemap(sample2) (1)_1
+      name: tilemap(sample3)_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 450
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_2
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 450
+        x: 50
+        y: 50
         width: 50
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilemap(sample2) (1)_3
+      name: tilemap(sample3)_3
       rect:
         serializedVersion: 2
-        x: 200
-        y: 450
+        x: 100
+        y: 50
         width: 75
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilemap(sample2) (1)_4
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 450
-        width: 100
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 409
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_6
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 409
-        width: 50
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_7
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 409
-        width: 75
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_8
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 409
-        width: 100
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_9
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 381
-        width: 25
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_10
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 369
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_11
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 369
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: tilemap(sample2) (1)_12
+      name: tilemap(sample3)_4
       rect:
         serializedVersion: 2
         x: 175
-        y: 369
-        width: 25
+        y: 50
+        width: 100
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tilemap(sample2) (1)_13
+      name: tilemap(sample3)_5
       rect:
         serializedVersion: 2
-        x: 225
-        y: 369
+        x: 0
+        y: 25
         width: 25
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 25
+        width: 50
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 25
+        width: 75
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_8
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 25
+        width: 100
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_12
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_13
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tilemap(sample3)_14
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
