@@ -16,6 +16,7 @@ public class pointer_ctr : MonoBehaviour
     float Green;
     float Brue;
     float Alpha;
+    float Color_Speed = 1.0f;
 
     bool touch_E;           //敵に触れているか判定する変数
     bool gradation_switch;  //カーソルの色を点滅させたいときに使う変数
@@ -103,7 +104,7 @@ public class pointer_ctr : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = new Color(Red, 0.0f, 0.0f);
         if (gradation_switch == true)
         {
-            Red += 1.0f * Time.deltaTime;
+            Red += Color_Speed * Time.deltaTime;
             if (Red >= 1.0f)
             {
                 gradation_switch = false;
@@ -111,7 +112,7 @@ public class pointer_ctr : MonoBehaviour
         }
         if (gradation_switch == false)
         {
-            Red -= 1.0f * Time.deltaTime;
+            Red -= Color_Speed * Time.deltaTime;
             if (Red <= 0.4f)
             {
                 gradation_switch = true;
@@ -133,7 +134,7 @@ public class pointer_ctr : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = new Color(0.0f, Green, 1.0f);
         if (gradation_switch == true)
         {
-            Green += 1.0f * Time.deltaTime;
+            Green += Color_Speed * Time.deltaTime;
             if (Green >= 0.6f)
             {
                 gradation_switch = false;
@@ -141,22 +142,40 @@ public class pointer_ctr : MonoBehaviour
         }
         if (gradation_switch == false)
         {
-            Green -= 1.0f * Time.deltaTime;
+            Green -= Color_Speed * Time.deltaTime;
             if (Green <= 0.0f)
             {
                 gradation_switch = true;
             }
+        }
+
+        //左クリックゲームスタート
+        if (Input.GetMouseButtonDown(0))
+        {
+            Color_Speed = 10.0f;
+            animator.SetFloat("Attack", Color_Speed);
+            Fade_ctr.GameStrat = true;
+        }
+        else
+        {
+            Fade_ctr.GameStrat = false;
         }
     }
 
     //敵から離れたとき実行するメソッド
     public void Enemyleave()
     {
-        //lock-onアニメーションを止める
+        Color_Speed = 1.0f;
+
+        //アニメーションを止める
         animator.SetFloat("lock-on", 0.0f);
+        animator.SetFloat("Attack", 0.0f);
 
         //敵から離れたら45度戻す
         pointerRotate = Mathf.Clamp(pointerRotate - Time.deltaTime * 200, 0, 45);
         transform.eulerAngles = new Vector3(0, 0, pointerRotate);
+
+        //色を白に戻す
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 }

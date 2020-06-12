@@ -8,6 +8,8 @@ public class Fade_ctr : MonoBehaviour
 
     Demo_cells demo;
 
+    public static bool GameStrat;
+
     public void OnClick()
     {
 
@@ -17,12 +19,13 @@ public class Fade_ctr : MonoBehaviour
     void Start()
     {
         demo = GetComponent<Demo_cells>();
+        GameStrat = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (GameStrat == true)
         {
             demo.Change_mode(1);
             fade.FadeIn(2.7f);

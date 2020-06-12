@@ -1,15 +1,9 @@
 fileFormatVersion: 2
-guid: bf877e9105dcb904c8f9b4a0ac4593f6
-timeCreated: 1584454941
+guid: ca0719794ff16af45bb598db159da32f
+timeCreated: 1591940064
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: pointer(Animation)_0
-    21300002: pointer(Animation)_1
-    21300004: pointer(Animation)_2
-    21300006: pointer(Animation)_3
-    21300008: pointer(Animation)_4
-    21300010: pointer(Animation)_5
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -46,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,91 +109,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: pointer(Animation)_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 51
-        width: 23
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pointer(Animation)_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 52
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pointer(Animation)_2
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 53
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pointer(Animation)_3
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 15
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pointer(Animation)_4
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 17
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: pointer(Animation)_5
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 18
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 
