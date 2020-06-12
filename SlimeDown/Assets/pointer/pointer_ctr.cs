@@ -168,6 +168,7 @@ public class pointer_ctr : MonoBehaviour
         {
             Color_Speed = 10.0f;
             animator.SetFloat("Attack", Color_Speed);
+            Start_ctr.Start_Check = true;
             Fade_ctr.GameStrat = true;
         }
         else
