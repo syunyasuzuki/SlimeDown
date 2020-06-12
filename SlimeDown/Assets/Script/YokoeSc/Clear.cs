@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Clear : MonoBehaviour {
 
     //マップ変更の変数
-    public static int mp = 0;
+    public static int mp = 3;
 
 	// Use this for initialization
 	void Start () {
