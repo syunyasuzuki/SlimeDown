@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Clear : MonoBehaviour {
 
+    //マップ変更の変数
     public static int mp = 0;
 
 	// Use this for initialization
@@ -19,11 +20,13 @@ public class Clear : MonoBehaviour {
 
     void OnCollisionEnter2D (Collision2D col)
     {
+        //当たったオブジェクトがプレイヤーの場合
         if(gameObject.name=="Player")
         {
+            //マップ変更
             mp += 1;
 
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("GameScene");
 
             //if(mp==0)
             //{
