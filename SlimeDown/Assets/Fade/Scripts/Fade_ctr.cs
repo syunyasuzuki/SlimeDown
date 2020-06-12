@@ -28,7 +28,7 @@ public class Fade_ctr : MonoBehaviour
         if (GameStrat == true)
         {
             demo.Change_mode(1);
-            fade.FadeIn(2.7f);
+            fade.FadeIn(2.8f);
         }
     }
 }
