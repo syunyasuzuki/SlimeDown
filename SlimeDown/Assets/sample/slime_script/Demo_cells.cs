@@ -61,7 +61,7 @@ public class Demo_cells : MonoBehaviour
         m_number = new int[num];
         for (int i = 0; i < num; ++i)
         {
-            m_instance_t[i] = new Vector3(R(1.75f), Random.Range(-0.2f, 1.4f), 0.0f);
+            m_instance_t[i] = new Vector3(R(4.4f), Random.Range(-0.4f, 3.4f), 0.0f);
             m_instance_color[i] = new Color(1.0f, 1.0f, 1.0f, 0.0f);
             m_instance_time[i] = Random.Range(0.01f, 0.03f);
             m_def_p[i] = m_instance_t[i].x;
