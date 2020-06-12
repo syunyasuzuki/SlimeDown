@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pointer_ctr : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class pointer_ctr : MonoBehaviour
 
     Vector3 screenPoint;
     float pointerRotate;
-    public float Speed;
-    float pointer_move_x;
-    float pointer_move_y;
+
+    float P_Position_x;
+    float P_Position_y;
+    //public float Speed;
+    //float pointer_move_x;
+    //float pointer_move_y;
 
     float Red;
     float Green;
@@ -37,7 +41,9 @@ public class pointer_ctr : MonoBehaviour
 
         //マウスカーソルに追従させるプログラム
         screenPoint = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 a = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+        P_Position_x = Input.mousePosition.x;
+        P_Position_y = Input.mousePosition.y;
+        Vector3 a = new Vector3(P_Position_x, P_Position_y, screenPoint.z);
         transform.position = Camera.main.ScreenToWorldPoint(a);
 
         //キー又は、ジョイスティックが未入力の場合ポインターを非表示
@@ -149,8 +155,16 @@ public class pointer_ctr : MonoBehaviour
             }
         }
 
-        //左クリックゲームスタート
+        //敵にとびかかる
         if (Input.GetMouseButtonDown(0))
+        {
+            
+            Color_Speed = 10.0f;
+            animator.SetFloat("Attack", Color_Speed);
+        }
+
+        //左クリックゲームスタート
+        if (SceneManager.GetActiveScene().name == "TitleScene" && Input.GetMouseButtonDown(0))
         {
             Color_Speed = 10.0f;
             animator.SetFloat("Attack", Color_Speed);
