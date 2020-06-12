@@ -12,6 +12,9 @@ public class Mapsample : MonoBehaviour
     [SerializeField] GameObject ene1;
     [SerializeField] GameObject ene2;
     [SerializeField] GameObject ene3;
+    [SerializeField] GameObject jb1;
+    [SerializeField] GameObject jb2;
+    [SerializeField] GameObject jb3;
     // Use this for initialization
 
     public int[,,] map =
@@ -317,10 +320,18 @@ public class Mapsample : MonoBehaviour
                         GameObject subgo7 = Instantiate(ene3) as GameObject;
                         subgo7.transform.position = new Vector3(px[na], py[lu], 0);
                         break;
-                    //case 8:
-                    //    GameObject subgo8 = Instantiate(ene3) as GameObject;
-                    //    subgo8.transform.position = new Vector3(px[na], py[lu], 0);
-                    //    break;
+                    case 8:
+                        GameObject subgo8 = Instantiate(jb1) as GameObject;
+                        subgo8.transform.position = new Vector3(px[na], py[lu], 0);
+                        break;
+                    case 9:
+                        GameObject subgo9 = Instantiate(jb2) as GameObject;
+                        subgo9.transform.position = new Vector3(px[na], py[lu], 0);
+                        break;
+                    case 10:
+                        GameObject subgo10 = Instantiate(jb3) as GameObject;
+                        subgo10.transform.position = new Vector3(px[na], py[lu], 0);
+                        break;
 
                 }
             }
