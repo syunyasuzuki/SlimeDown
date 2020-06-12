@@ -156,7 +156,7 @@ public class Demo_cells : MonoBehaviour
                 trans = bob.transform.position;
                 for (int i = r.begin; i < r.end; i++)
                 {
-                    m_fall_time[i] += Time.deltaTime;
+                    m_fall_time[i] += 2.5f * Time.deltaTime;
                     float pointy = m_instance_t[i].y - m_instance_time[i] * m_fall_time[i];
                     float pointx = m_instance_t[i].x;
                     //float pointx = m_instance_t[i].x + ((trans.x - m_instance_t[i].x) * 0.01f);
