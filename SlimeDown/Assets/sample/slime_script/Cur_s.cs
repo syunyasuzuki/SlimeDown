@@ -60,6 +60,7 @@ public class Cur_s : MonoBehaviour {
         else{
             trans.position = new Vector3(Parent_.transform.position.x + subs * Mathf.Cos(sss), Parent_.transform.position.y + subs * Mathf.Sin(sss));
         }
+        if (Input.GetMouseButtonDown(0)) { Parent_.GetComponent<Slime_sp1>().Atk_(Parent_.transform.position.x - transform.position.x, Parent_.transform.position.y - transform.position.y); }
         //trans.position = new Vector3(subv3.x, subv3.y, 0.0f);
     }
 }
