@@ -74,7 +74,6 @@ public class FadeCon : MonoBehaviour
             {
                 FadeOut1();
             }
-
         }
         if (isFade2)
         {

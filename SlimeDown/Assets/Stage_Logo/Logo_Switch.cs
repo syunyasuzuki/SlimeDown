@@ -51,6 +51,5 @@ public class Logo_Switch : MonoBehaviour
             Alpha4 = 1.0f;
             Stage_Logo4.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, Alpha4);
         }
-
     }
 }
