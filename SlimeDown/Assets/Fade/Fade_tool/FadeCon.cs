@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class FadeCon : MonoBehaviour
 {
-    public GameObject Stage_Logo1;
-    public GameObject Stage_Logo2;
-    public GameObject Stage_Logo3;
-    public GameObject Stage_Logo4;
-
     public Image FadeImage1;
     public Image FadeImage2;
     //public Image FadeImage3;
@@ -31,11 +26,6 @@ public class FadeCon : MonoBehaviour
     public static float alpha2;
     //public static float alpha3;
 
-    float Alpha1;
-    float Alpha2;
-    float Alpha3;
-    float Alpha4;
-
     // Use this for initialization
     void Start ()
     {
@@ -50,16 +40,6 @@ public class FadeCon : MonoBehaviour
         //isFade3 = true;
         //isFadeIn3 = true;
         //isFadeOut3 = false;
-
-        Alpha1 = 0.0f;
-        Alpha2 = 0.0f;
-        Alpha3 = 0.0f;
-        Alpha4 = 0.0f;
-
-        Stage_Logo1.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, Alpha1);
-        Stage_Logo2.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, Alpha2);
-        Stage_Logo3.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, Alpha3);
-        Stage_Logo4.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, Alpha4);
 
         if (SceneManager.GetActiveScene().name == "ClearScene")
         {
@@ -78,23 +58,6 @@ public class FadeCon : MonoBehaviour
             alpha1 = 1.0f;
             alpha2 = 0.0f;
             //alpha3 = 0.0f;
-        }
-
-        if (Clear.mp == 0)
-        {
-            Alpha1 = 1.0f;
-        }
-        else if (Clear.mp == 1)
-        {
-            Alpha2 = 1.0f;
-        }
-        else if (Clear.mp == 2)
-        {
-            Alpha3 = 1.0f;
-        }
-        else if (Clear.mp == 3)
-        {
-            Alpha4 = 1.0f;
         }
     }
 	
