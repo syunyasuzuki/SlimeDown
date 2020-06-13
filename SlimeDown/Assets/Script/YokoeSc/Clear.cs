@@ -31,9 +31,10 @@ public class Clear : MonoBehaviour {
             //マップ変更
             mp += 1;
 
-            FadeCon.isFadeIn1 = true;
+            FadeCon.isFade1 = true;
+            FadeCon.isFadeOut1 = true;
 
-            Invoke("LS", 2);
+            Invoke("LS", 1.5f);
 
         }
     }
