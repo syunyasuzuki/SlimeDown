@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Logo_Back_ctr : MonoBehaviour
 {
-    public AudioClip Stage_Logo_SE;
-
-    AudioSource audio;
-
     float alpha;
     float Red;
     float Green;
@@ -21,9 +17,6 @@ public class Logo_Back_ctr : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        audio = gameObject.GetComponent<AudioSource>();
-        audio.clip = Stage_Logo_SE;
-
         Stage_Check = false;
         alpha = 0.0f;
         scale_x = 0.0f;

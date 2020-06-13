@@ -41,7 +41,7 @@ public class FadeCon : MonoBehaviour
         //isFadeIn3 = true;
         //isFadeOut3 = false;
 
-        if (SceneManager.GetActiveScene().name == "GameClearScene")
+        if (SceneManager.GetActiveScene().name == "ClearScene")
         {
             alpha1 = 0.0f;
             alpha2 = 1.0f;
