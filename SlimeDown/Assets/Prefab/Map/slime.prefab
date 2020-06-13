@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4117234137824688}
   - component: {fileID: 114977761641449628}
   - component: {fileID: 212710798465994814}
-  - component: {fileID: 61348627445993042}
   - component: {fileID: 50494349644499178}
+  - component: {fileID: 58077956510245502}
   m_Layer: 0
   m_Name: slime
   m_TagString: Untagged
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61348627445993042
-BoxCollider2D:
+--- !u!58 &58077956510245502
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,18 +76,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.15}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7}
-  m_EdgeRadius: 0
+  m_Radius: 0.35
 --- !u!114 &114977761641449628
 MonoBehaviour:
   m_ObjectHideFlags: 1
