@@ -36,13 +36,11 @@ public class Logo_Back_ctr : MonoBehaviour
 
         if (Stage_Check == true)
         {
-            //Invoke("Logo_Back_Open", 0.5f);
             Logo_Back_Open();
         }
 
         if (Stage_Check == false)
         {
-            //Invoke("Logo_Back_Close", 0.5f);
             Logo_Back_Close();
         }
     }
@@ -63,7 +61,6 @@ public class Logo_Back_ctr : MonoBehaviour
         if (scale_x >= 9.0f && scale_y >= 0.7f)
         {
             Stage_Logo_ctr.Logo_Back_Check = true;
-            //audio.Play();
         }
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, alpha);
         transform.localScale = new Vector2(scale_x, scale_y);
