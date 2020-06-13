@@ -309,6 +309,7 @@ MonoBehaviour:
   jb2: {fileID: 1888162315805144, guid: 849e5e47d9e2e0e4b8af4add256c1d83, type: 2}
   jb3: {fileID: 1928524159520066, guid: 5e95feb6ff221024fae895813a0bbff9, type: 2}
   jb4: {fileID: 1953196478423082, guid: 4ce5feb1b485b9047b0806e0c1e4a825, type: 2}
+  bb: {fileID: 1466393232631458, guid: eddf2ef233d67af4fbab41b4c22cdd5c, type: 2}
 --- !u!4 &447300000
 Transform:
   m_ObjectHideFlags: 0
