@@ -31,8 +31,15 @@ public class Clear : MonoBehaviour {
             //マップ変更
             mp += 1;
 
-            SceneManager.LoadScene("GameScene");
+            FadeCon.isFadeIn1 = true;
+
+            Invoke("LS", 2);
 
         }
+    }
+
+    void LS()
+    {
+        SceneManager.LoadScene("GameScene");
     }
 }
