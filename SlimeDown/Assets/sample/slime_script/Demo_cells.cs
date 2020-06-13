@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Ist;
+using UnityEngine.SceneManagement;
 
 
 public class Demo_cells : MonoBehaviour
@@ -59,15 +60,30 @@ public class Demo_cells : MonoBehaviour
         m_fall_time = new float[num];
         m_def_p = new float[num];
         m_number = new int[num];
-        for (int i = 0; i < num; ++i)
-        {
-            m_instance_t[i] = new Vector3(R(4.4f), Random.Range(-0.4f, 3.4f), 0.0f);
-            m_instance_color[i] = new Color(1.0f, 1.0f, 1.0f, 0.0f);
-            m_instance_time[i] = Random.Range(0.01f, 0.03f);
-            m_def_p[i] = m_instance_t[i].x;
-            m_number[i] = i;
-        }
 
+        if (SceneManager.GetActiveScene().name == "TitleScene")
+        {
+            for (int i = 0; i < num; ++i)
+            {
+                m_instance_t[i] = new Vector3(R(4.4f), Random.Range(-0.4f, 3.4f), 0.0f);
+                m_instance_color[i] = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+                m_instance_time[i] = Random.Range(0.01f, 0.03f);
+                m_def_p[i] = m_instance_t[i].x;
+                m_number[i] = i;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "ClearScene")
+        {
+            for (int i = 0; i < num; ++i)
+            {
+                m_instance_t[i] = new Vector3(R(8.2f), Random.Range(5.2f, 15.2f), 0.0f);
+                m_instance_color[i] = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+                m_instance_time[i] = Random.Range(0.01f, 0.03f);
+                m_def_p[i] = m_instance_t[i].x;
+                m_number[i] = i;
+            }
+
+        }
     }
 
     void Update()
