@@ -30,7 +30,7 @@ public class HopEnemy : MonoBehaviour {
         //{
         //    flag = !flag;
         //}
-        if (col.gameObject.tag == "player")
+        if (col.gameObject.tag == "Player")
         {
             HIT();
 
