@@ -297,9 +297,9 @@ MonoBehaviour:
   pipe: {fileID: 1071256640610740, guid: 07e23be28e407a646810f537085f9b99, type: 2}
   pipe2: {fileID: 1913823478559916, guid: 3ce17416cf8c8c14b9641108867a7f3a, type: 2}
   player: {fileID: 1031723540217342, guid: 7d1c18867fb28774c91aad1a87378e30, type: 2}
-  ene1: {fileID: 1350582299782340, guid: 9dcc2fa887767054e9c887d39f0f8e67, type: 2}
-  ene2: {fileID: 1350582299782340, guid: 9dcc2fa887767054e9c887d39f0f8e67, type: 2}
-  ene3: {fileID: 1350582299782340, guid: 9dcc2fa887767054e9c887d39f0f8e67, type: 2}
+  ene1: {fileID: 1689082119886646, guid: 4904915a21eee034d8cf8fa9f4dcff7c, type: 2}
+  ene2: {fileID: 1213101622835054, guid: 80fa44e2f5fc85f408ac2e9a9239898d, type: 2}
+  ene3: {fileID: 1592804958882842, guid: 6fcd16e951877e24487a6540318c6c14, type: 2}
   jb1: {fileID: 1799876233765634, guid: d42ae58d33c0b824eb95f445700d6571, type: 2}
   jb2: {fileID: 1888162315805144, guid: 849e5e47d9e2e0e4b8af4add256c1d83, type: 2}
   jb3: {fileID: 1928524159520066, guid: 5e95feb6ff221024fae895813a0bbff9, type: 2}
@@ -856,6 +856,7 @@ GameObject:
   - component: {fileID: 1924541811}
   - component: {fileID: 1924541810}
   - component: {fileID: 1924541812}
+  - component: {fileID: 1924541813}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -904,6 +905,86 @@ MonoBehaviour:
   Stage_Logo2: {fileID: 1280369343}
   Stage_Logo3: {fileID: 1636197079}
   Stage_Logo4: {fileID: 1816997929}
+--- !u!82 &1924541813
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1924541809}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 404c87bdc686d734ca68dc082e954a05, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &2039599517
 Prefab:
   m_ObjectHideFlags: 0
