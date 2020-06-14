@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212558944944132296}
   - component: {fileID: 95823551157097588}
   - component: {fileID: 114693263793591144}
-  - component: {fileID: 61616212204827542}
   - component: {fileID: 50980664198906582}
+  - component: {fileID: 58023608991485502}
   m_Layer: 0
   m_Name: BlueEnemy
   m_TagString: Enemy
@@ -52,20 +52,20 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1689082119886646}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61616212204827542
-BoxCollider2D:
+--- !u!58 &58023608991485502
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -73,22 +73,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.36}
-    newSize: {x: 0.5, y: 0.36}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.36}
-  m_EdgeRadius: 0
+  m_Radius: 0.18
 --- !u!95 &95823551157097588
 Animator:
   serializedVersion: 3
