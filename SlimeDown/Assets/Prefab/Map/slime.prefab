@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   helth_box: {fileID: 1424469838650918, guid: 974d674179d620c429cf60ccc56a2b04, type: 2}
-  helthpoint: 200
-  delete_helth: 1
+  helthpoint: 1000
+  delete_helth: 5
   Air: {fileID: 0}
   Max_animation: 030000000000000000000000
   normal:

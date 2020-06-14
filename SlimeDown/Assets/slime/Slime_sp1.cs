@@ -9,7 +9,7 @@ public class Slime_sp1 : MonoBehaviour
 
     [SerializeField] GameObject helth_box;
     //現在の体力
-    [SerializeField] int helthpoint = 200;
+    [SerializeField] int helthpoint = 1000;
     //移動当たり減る体力(0.1)
     [SerializeField] int delete_helth = 1;
     //体力の読み取り
