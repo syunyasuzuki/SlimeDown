@@ -123,7 +123,7 @@ public class FadeCon : MonoBehaviour
     }
     public void FadeIn2()
     {
-        alpha2 -= 0.05f;
+        alpha2 -= 0.02f;
         FadeImage2.color = new Color(1.0f, 1.0f, 1.0f, alpha2);
         if (alpha2 <= 0.0f)
         {
