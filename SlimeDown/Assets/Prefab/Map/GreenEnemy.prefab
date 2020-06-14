@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95154504157938726}
   - component: {fileID: 50188267792978308}
   - component: {fileID: 58274020175876212}
+  - component: {fileID: 114471508633812008}
   m_Layer: 0
   m_Name: GreenEnemy
   m_TagString: Enemy
@@ -95,6 +96,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114471508633812008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213101622835054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7d1187bfa7d3f418f8c2b5bd520c11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0.01
+  y: 0
 --- !u!212 &212773099579870514
 SpriteRenderer:
   m_ObjectHideFlags: 1

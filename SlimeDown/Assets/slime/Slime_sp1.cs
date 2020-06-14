@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Slime_sp1 : MonoBehaviour
 {
-
-
     [SerializeField] GameObject helth_box;
     //現在の体力
     [SerializeField] int helthpoint = 1000;
@@ -35,12 +33,13 @@ public class Slime_sp1 : MonoBehaviour
     {
         float subf = Mathf.Sqrt((float)helthpoint / Defoult_helth);
         transform.localScale = new Vector3(subf * vec_now, subf, 1);
-        
+
     }
     //体力を変える(増減値)
     public void Set_Helthpoint(int n)
     {
         helthpoint += n;
+        if (helthpoint <= 0) { Reset_all(); }
         Set_vel();
     }
     //移動ごとに体力を減らす
@@ -53,6 +52,15 @@ public class Slime_sp1 : MonoBehaviour
             Set_Helthpoint(-delete_helth);
         }
         position_was = transform.position.x;
+    }
+
+    private Vector2 Start_position;
+    private int Start_helth;
+
+    private void Reset_all()
+    {
+        transform.position = Start_position;
+        helthpoint = Start_helth;
     }
 
     SpriteRenderer sr;
@@ -217,6 +225,7 @@ public class Slime_sp1 : MonoBehaviour
         {
         }
         Instantiate(helth_box);
+        Start_helth = helthpoint;
         sr = GetComponent<SpriteRenderer>();
         bo2 = GetComponent<BoxCollider2D>();
         rid2 = GetComponent<Rigidbody2D>();
@@ -224,7 +233,7 @@ public class Slime_sp1 : MonoBehaviour
 
     void Start()
     {
-
+        Start_position = transform.position;
     }
 
     void Update()
@@ -248,6 +257,8 @@ public class Slime_sp1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I)) { Set_Helthpoint(50); }
         //体力を100増やす
         if (Input.GetKeyDown(KeyCode.O)) { Set_Helthpoint(100); }
+        //
+        if (Input.GetKeyDown(KeyCode.P)) { Set_Helthpoint(-50); }
     }
 
 

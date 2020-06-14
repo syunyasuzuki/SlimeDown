@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Helth_m : MonoBehaviour {
 
-    private int helthpoints = 1000;
+    private int helthpoints = 2000;
     private GameObject slime;
 
 
