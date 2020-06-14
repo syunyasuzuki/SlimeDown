@@ -48,6 +48,7 @@ public class HopEnemy : MonoBehaviour {
     void Update () {
         Rigidbody2D rb = this.GetComponent<Rigidbody2D>();  // rigidbodyを取得
         timer += Time.deltaTime;
+        Vector3 scale = transform.localScale;
         if (timer > 1.5) {
             timer = 0;
             if (flag == true)
@@ -58,7 +59,8 @@ public class HopEnemy : MonoBehaviour {
                 Debug.Log(jumpcount);
                 if (jumpcount ==2)
                 {
-                    Debug.Log(x);
+                    scale.x = 1;
+                    //Debug.Log(x);
                     flag = !flag;
                     jumpcount = 0;
                                        
@@ -72,6 +74,7 @@ public class HopEnemy : MonoBehaviour {
                 Debug.Log(jumpcount);
                 if (jumpcount == 2)
                 {
+                    scale.x = -1;
                     flag = !flag;
                     jumpcount = 0;                                   
                 }

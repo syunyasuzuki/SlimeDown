@@ -7,8 +7,7 @@ public class MoveEnemy : MonoBehaviour {
     private bool turn = true;
     private float speed;
     public float x, y;
-    private GameObject player;
-    public float movecout;
+    private GameObject player;   
     private float timer;
 
     private int EnemyHP = 0;
@@ -20,15 +19,15 @@ public class MoveEnemy : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        
-	}
+
+    }
     void Hit()
     {
         //Set_Helthpoint(EnemyHP);//プレイヤー側に自分の体力を渡す
         //自分が死ぬ処理
-
+        Destroy(this.gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -41,10 +40,7 @@ public class MoveEnemy : MonoBehaviour {
         {
             Hit();
         }
-        if(other.gameObject.tag== "cliff")
-        {
-            turn = !turn;
-        }
+        
     }
     void Awake()
     {
@@ -56,28 +52,36 @@ public class MoveEnemy : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
-        Vector2 now = rb.position; //敵の座標を取得
-        timer += Time.deltaTime;
-		if(turn == true)
+        Vector2 now = rb.position; //敵の座標を取得        
+        Vector2 scale = transform.localScale;
+        timer += Time.deltaTime;               
+        if (turn == true)
         {
             now += new Vector2(x, y);  // 前に少しずつ移動するように加算
-            rb.position = now; // 値を設定            
+            rb.position = now; // 値を設定  ]
+            
             if (timer>5)
-            {                                       
-             turn = !turn;
+            {             
+             turn = !turn;            
              timer = 0;
+             scale.x = -1;
             }
+           
         }
         if(turn == false)
         {
             now -= new Vector2(x, y);
-            rb.position = now;           
+            rb.position = now;            
             if (timer > 5)
-            {                        
-             turn = !turn;
+            {                
+             turn = !turn;            
              timer = 0;
+             scale.x = 1;
             }
+           
         }
+        transform.localScale = scale;
 
     }
+
 }
