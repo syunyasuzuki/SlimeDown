@@ -59,11 +59,11 @@ public class HopEnemy : MonoBehaviour {
                 Debug.Log(jumpcount);
                 if (jumpcount ==2)
                 {
-                    scale.x = 1;
+                   
                     //Debug.Log(x);
                     flag = !flag;
                     jumpcount = 0;
-                                       
+                    scale.x = -1;
                 }
             }
             if (flag == false)
@@ -73,15 +73,15 @@ public class HopEnemy : MonoBehaviour {
                 jumpcount = 1 + jumpcount;
                 Debug.Log(jumpcount);
                 if (jumpcount == 2)
-                {
-                    scale.x = -1;
+                {                    
                     flag = !flag;
-                    jumpcount = 0;                                   
+                    jumpcount = 0;
+                    scale.x = 1;
                 }
             }
            
         }
-        
+        transform.localScale = scale;
     }
 
 }

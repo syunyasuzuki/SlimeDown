@@ -59,6 +59,7 @@ public class movehopEnemy : MonoBehaviour {
     {
         Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
         Vector2 now = rb.position; //敵の座標を取得
+        Vector3 scale = transform.localScale;
         timer += Time.deltaTime;
         if (turn == true)
         {
@@ -70,7 +71,7 @@ public class movehopEnemy : MonoBehaviour {
                 rb.AddForce(force, ForceMode2D.Impulse);          // 力を加える                
                     turn = !turn;
                     timer = 0;
-                
+                scale.x = -1;
             }
         }
         if (turn == false)
@@ -83,8 +84,10 @@ public class movehopEnemy : MonoBehaviour {
                 rb.AddForce(force, ForceMode2D.Impulse);          // 力を加える
                     turn = !turn;
                     timer = 0;
+                scale.x = 1;
             }
         }
-      
+        transform.localScale = scale;
+
     }
 }
