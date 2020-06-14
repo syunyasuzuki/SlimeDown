@@ -133,7 +133,7 @@ public class Demo_cells : MonoBehaviour
                 }
                 break;
         }
-        Debug.Log(x);
+        //Debug.Log(x);
     }
 
     //1回に処理するもの

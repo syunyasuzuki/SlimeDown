@@ -10,8 +10,10 @@ public class Clear_ctr : MonoBehaviour
     [SerializeField] Fade fade = null;
 
     [SerializeField] Image Clear_Logo;
+    [SerializeField] Image Clear_Logo_frame;
 
     [SerializeField] Image Clear_Back;
+    [SerializeField] Image Clear_Back_frame;
 
     [SerializeField] GameObject Click_Title;
 
@@ -59,7 +61,9 @@ public class Clear_ctr : MonoBehaviour
             if (Clear_Logo.rectTransform.localPosition.y <= 90 && Clear_Back.rectTransform.localPosition.y <= 90)
             {
                 Clear_Logo.rectTransform.localPosition += new Vector3(0, Y, 0) * Time.deltaTime;
+                Clear_Logo_frame.rectTransform.localPosition += new Vector3(0, Y, 0) * Time.deltaTime;
                 Clear_Back.rectTransform.localPosition += new Vector3(0, Y, 0) * Time.deltaTime;
+                Clear_Back_frame.rectTransform.localPosition += new Vector3(0, Y, 0) * Time.deltaTime;
             }
             else
             {

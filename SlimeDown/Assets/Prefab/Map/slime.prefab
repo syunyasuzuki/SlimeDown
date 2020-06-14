@@ -89,6 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c3b2a308e4df644a782200d57481e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helth_box: {fileID: 1424469838650918, guid: 974d674179d620c429cf60ccc56a2b04, type: 2}
+  helthpoint: 200
+  delete_helth: 1
   Air: {fileID: 0}
   Max_animation: 030000000000000000000000
   normal:

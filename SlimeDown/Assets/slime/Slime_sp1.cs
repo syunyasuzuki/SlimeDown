@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Slime_sp1 : MonoBehaviour
 {
 
+
+    [SerializeField] GameObject helth_box;
     //現在の体力
     [SerializeField] int helthpoint = 200;
     //移動当たり減る体力(0.1)
@@ -193,29 +195,30 @@ public class Slime_sp1 : MonoBehaviour
     }
 
 
-    //中心位置
-    private float local_px = 0;
-    private float local_py = 0;
-
-    //現在の中心点の位置を変える
-    private void Set_controlpoints(float nx, float ny)
-    {
-        local_px = nx;
-        local_py = ny;
-    }
-
     void Awake()
     {
+        Set_defoult_h();
         gameObject.name = "slime";
         GameObject cam = GameObject.Find("Main Camera");
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
             cam.GetComponent<camera_2c>().Set_cam();
         }
+
+        try
+        {
+            GameObject cell = GameObject.Find("helth_box");
+            helthpoint = cell.GetComponent<Helth_m>().Read_health();
+            cell.GetComponent<Helth_m>().Death_this_obj();
+            position_was = transform.position.x;
+        }
+        catch
+        {
+        }
+        Instantiate(helth_box);
         sr = GetComponent<SpriteRenderer>();
         bo2 = GetComponent<BoxCollider2D>();
         rid2 = GetComponent<Rigidbody2D>();
-        Set_defoult_h();
     }
 
     void Start()
@@ -245,5 +248,7 @@ public class Slime_sp1 : MonoBehaviour
         //体力を100増やす
         if (Input.GetKeyDown(KeyCode.O)) { Set_Helthpoint(100); }
     }
+
+
 
 }
