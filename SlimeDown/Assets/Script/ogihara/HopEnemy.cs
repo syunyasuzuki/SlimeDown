@@ -30,11 +30,11 @@ public class HopEnemy : MonoBehaviour {
         //{
         //    flag = !flag;
         //}
-        //if (col.gameObject.tag == "player")
-        //{
-        //    HIT();
+        if (col.gameObject.tag == "player")
+        {
+            HIT();
 
-        //}       
+        }
 
     }
 
@@ -56,7 +56,7 @@ public class HopEnemy : MonoBehaviour {
                 Vector2 force = new Vector2(x, y);  // 力を設定
                 rb.AddForce(force, ForceMode2D.Impulse);          // 力を加える
                 jumpcount = 1 + jumpcount;
-                Debug.Log(jumpcount);
+                //Debug.Log(jumpcount);
                 if (jumpcount ==2)
                 {
                    
@@ -71,7 +71,7 @@ public class HopEnemy : MonoBehaviour {
                 Vector2 force2 = new Vector2(-x, y);  // 力を設定
                 rb.AddForce(force2, ForceMode2D.Impulse);          // 力を加える
                 jumpcount = 1 + jumpcount;
-                Debug.Log(jumpcount);
+                //Debug.Log(jumpcount);
                 if (jumpcount == 2)
                 {                    
                     flag = !flag;

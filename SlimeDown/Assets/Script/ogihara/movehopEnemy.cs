@@ -34,18 +34,18 @@ public class movehopEnemy : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
-    //    if (other.gameObject.tag == "wall")
-    //    {
-    //        turn = !turn;
-    //    }
-    //    if (other.gameObject.tag == "player")
-    //    {
-    //        Hit();
-    //    }
-    //    if (other.gameObject.tag == "cliff")
-    //    {
-    //        turn = !turn;
-    //    }
+        //    if (other.gameObject.tag == "wall")
+        //    {
+        //        turn = !turn;
+        //    }
+        if (other.gameObject.tag == "player")
+        {
+            Hit();
+        }
+        //    if (other.gameObject.tag == "cliff")
+        //    {
+        //        turn = !turn;
+        //    }
     }
     void Awake()
     {
