@@ -17,6 +17,8 @@ public class Clear_ctr : MonoBehaviour
 
     float Alpha;
 
+    float Y;
+
     // Use this for initialization
     void Start ()
     {
