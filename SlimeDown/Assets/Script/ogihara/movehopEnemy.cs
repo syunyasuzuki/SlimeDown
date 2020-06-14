@@ -49,8 +49,7 @@ public class movehopEnemy : MonoBehaviour {
     }
     void Awake()
     {
-        //プレイヤー
-        //player=GameObject.Find("");
+        player = GameObject.Find("slime");
         Start_Helth(529);
     }
 
