@@ -20,7 +20,7 @@ public class Clear_ctr : MonoBehaviour
     float Image_Alpha;
     float Object_Alpha;
 
-    float Y = 100.0f;
+    float Y = 150.0f;
 
     bool Clear_Check;
 
