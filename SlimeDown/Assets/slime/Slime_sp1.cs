@@ -35,6 +35,7 @@ public class Slime_sp1 : MonoBehaviour
     {
         float subf = Mathf.Sqrt((float)helthpoint / Defoult_helth);
         transform.localScale = new Vector3(subf * vec_now, subf, 1);
+        
     }
     //体力を変える(増減値)
     public void Set_Helthpoint(int n)
