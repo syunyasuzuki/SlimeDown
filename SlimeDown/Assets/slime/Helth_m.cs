@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Helth_m : MonoBehaviour {
 
-    private int helthpoints = 0;
+    private int helthpoints = 200;
     private GameObject slime;
 
 
@@ -17,7 +18,10 @@ public class Helth_m : MonoBehaviour {
     }
     //体力を保存
     private void Take_helth(){
-        helthpoints = slime.GetComponent<Slime_sp1>().Read_helthpoint();
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            helthpoints = slime.GetComponent<Slime_sp1>().Read_helthpoint();
+        }
     }
     //体力を教える
     public int Read_health(){
