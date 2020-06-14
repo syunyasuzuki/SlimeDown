@@ -40,11 +40,18 @@ public class HopEnemy : MonoBehaviour {
 
     void HIT()
     {
-        //Set_HelsePoint(EnemyHP); //敵のHP
+        player.GetComponent<Slime_sp1>().Set_Helthpoint(EnemyHP);
+        Destroy(this.gameObject);
+    }
+    void Awake()
+    {
+        //プレイヤー
+        player = GameObject.Find("slime");
+        Start_Helth(529);
     }
     // Update is called once per frame
 
-     
+
     void Update () {
         Rigidbody2D rb = this.GetComponent<Rigidbody2D>();  // rigidbodyを取得
         timer += Time.deltaTime;

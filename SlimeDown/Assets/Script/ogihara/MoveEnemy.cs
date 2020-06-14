@@ -36,7 +36,7 @@ public class MoveEnemy : MonoBehaviour {
         {
             turn = !turn;
         }
-        if(other.gameObject.tag == "player")
+        if(other.gameObject.tag == "Player")
         {
             Hit();
         }

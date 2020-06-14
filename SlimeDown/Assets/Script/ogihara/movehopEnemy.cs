@@ -27,9 +27,9 @@ public class movehopEnemy : MonoBehaviour {
     }
     void Hit()
     {
-        //Set_Helthpoint(EnemyHP);//プレイヤー側に自分の体力を渡す
+        player.GetComponent<Slime_sp1>().Set_Helthpoint(EnemyHP);
         //自分が死ぬ処理
-
+        Destroy(this.gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -38,7 +38,7 @@ public class movehopEnemy : MonoBehaviour {
         //    {
         //        turn = !turn;
         //    }
-        if (other.gameObject.tag == "player")
+        if (other.gameObject.tag == "Player")
         {
             Hit();
         }
