@@ -25,7 +25,8 @@ public class MoveEnemy : MonoBehaviour {
     }
     void Hit()
     {
-        //Set_Helthpoint(EnemyHP);//プレイヤー側に自分の体力を渡す
+        player.GetComponent<Slime_sp1>();
+        Set_Helthpoint(EnemyHP);//プレイヤー側に自分の体力を渡す
         //自分が死ぬ処理
         Destroy(this.gameObject);
     }
@@ -45,7 +46,7 @@ public class MoveEnemy : MonoBehaviour {
     void Awake()
     {
         //プレイヤー
-        //player=GameObject.Find("");
+        player=GameObject.Find("slime");
         Start_Helth(529);
     }
 
