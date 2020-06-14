@@ -175,6 +175,14 @@ public class pointer_ctr : MonoBehaviour
         {
             Fade_ctr.GameStrat = false;
         }
+
+        //左クリックタイトルに戻る
+        if (SceneManager.GetActiveScene().name == "ClearScene" && Input.GetMouseButtonDown(0))
+        {
+            FadeCon.isFade1 = true;
+            FadeCon.isFadeOut1 = true;
+            Invoke("Go_Title", 1.5f);
+        }
     }
 
     //敵から離れたとき実行するメソッド
@@ -192,5 +200,10 @@ public class pointer_ctr : MonoBehaviour
 
         //色を白に戻す
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    }
+
+    void Go_Title()
+    {
+        SceneManager.LoadScene("TitleScene");
     }
 }

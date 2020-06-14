@@ -15,34 +15,61 @@ public class Clear_ctr : MonoBehaviour
 
     [SerializeField] GameObject Click_Title;
 
-    float Alpha;
+    float Image_Alpha;
+    float Object_Alpha;
 
-    float Y;
+    float Y = 100.0f;
+
+    bool Clear_Check;
 
     // Use this for initialization
     void Start ()
     {
+        Clear_Check = false;
+
         demo = GetComponent<Demo_cells>();
 
         demo.Change_mode(1);
 
-        Alpha = 0.0f;
+        Image_Alpha = 0.0f;
+        Object_Alpha = 0.0f;
 
-        Clear_Back.color = new Color(1.0f, 1.0f, 1.0f, Alpha);
-        Clear_Logo.color = new Color(1.0f, 1.0f, 1.0f, Alpha);
+        Clear_Back.color = new Color(1.0f, 1.0f, 1.0f, Image_Alpha);
+        Clear_Logo.color = new Color(1.0f, 1.0f, 1.0f, Image_Alpha);
+
+        Click_Title.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, Object_Alpha);
 
         fade.FadeIn(1.0f, () =>
         {
-            Alpha = 1.0f;
-            Clear_Back.color = new Color(0.0f, 0.5f, 1.0f, Alpha);
-            Clear_Logo.color = new Color(0.0f, 1.0f, 1.0f, Alpha);
-            fade.FadeOut(5.0f);
+            Image_Alpha = 1.0f;
+            Clear_Back.color = new Color(0.0f, 0.5f, 1.0f, Image_Alpha);
+            Clear_Logo.color = new Color(0.0f, 1.0f, 1.0f, Image_Alpha);
+            fade.FadeOut(5.0f, () =>
+            {
+                Clear_Check = true;
+            });
         });
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        
-	}
+        if (Clear_Check == true)
+        {
+            if (Clear_Logo.rectTransform.localPosition.y <= 90 && Clear_Back.rectTransform.localPosition.y <= 90)
+            {
+                Clear_Logo.rectTransform.localPosition += new Vector3(0, Y, 0) * Time.deltaTime;
+                Clear_Back.rectTransform.localPosition += new Vector3(0, Y, 0) * Time.deltaTime;
+            }
+            else
+            {
+                Object_Alpha += 5.0f * Time.deltaTime;
+                Click_Title.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, Object_Alpha);
+                if (Object_Alpha >= 1.0f)
+                {
+                    Clear_Check = false;
+                }
+            }
+        }
+    }
 }
