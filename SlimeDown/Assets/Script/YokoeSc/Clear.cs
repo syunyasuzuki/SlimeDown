@@ -26,21 +26,33 @@ public class Clear : MonoBehaviour {
         player = col.gameObject.name;
 
         //当たったオブジェクトがプレイヤーの場合
-        if (player == "slime")
-        {
-            //マップ変更
-            mp += 1;
-
+        if (player == "slime" && mp < 3)
+        {   
             FadeCon.isFade1 = true;
             FadeCon.isFadeOut1 = true;
 
             Invoke("LS", 1.5f);
+        }
 
+        //今がステージ４でプレイヤーが触れたとき
+        if (player == "slime" && mp == 3)
+        {
+            FadeCon.isFade2 = true;
+            FadeCon.isFadeOut2 = true;
+
+            Invoke("Go_ClearScene", 2.0f);
         }
     }
 
     void LS()
     {
+        //マップ変更
+        mp += 1;
         SceneManager.LoadScene("GameScene");
+    }
+
+    void Go_ClearScene()
+    {
+        SceneManager.LoadScene("ClearScene");
     }
 }
