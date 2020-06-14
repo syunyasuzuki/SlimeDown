@@ -76,7 +76,7 @@ public class Demo_cells : MonoBehaviour
         {
             for (int i = 0; i < num; ++i)
             {
-                m_instance_t[i] = new Vector3(R(8.2f), Random.Range(5.2f, 15.2f), 0.0f);
+                m_instance_t[i] = new Vector3(R(8.2f), Random.Range(5.2f, 17.2f), 0.0f);
                 m_instance_color[i] = new Color(1.0f, 1.0f, 1.0f, 0.0f);
                 m_instance_time[i] = Random.Range(0.01f, 0.03f);
                 m_def_p[i] = m_instance_t[i].x;
@@ -169,15 +169,31 @@ public class Demo_cells : MonoBehaviour
                 break;
             case 1:
                 //滝
-                trans = bob.transform.position;
-                for (int i = r.begin; i < r.end; i++)
+                if (SceneManager.GetActiveScene().name == "TitleScene")
                 {
-                    m_fall_time[i] += 2.5f * Time.deltaTime;
-                    float pointy = m_instance_t[i].y - m_instance_time[i] * m_fall_time[i];
-                    float pointx = m_instance_t[i].x;
-                    //float pointx = m_instance_t[i].x + ((trans.x - m_instance_t[i].x) * 0.01f);
-                    //if (pointy < -5.0f) { pointy = 5.0f; m_fall_time[i] = 0; pointx = m_def_p[i]; }
-                    m_instance_t[i] = new Vector3(pointx, pointy, 1.0f);
+                    trans = bob.transform.position;
+                    for (int i = r.begin; i < r.end; i++)
+                    {
+                        m_fall_time[i] += 2.5f * Time.deltaTime;
+                        float pointy = m_instance_t[i].y - m_instance_time[i] * m_fall_time[i];
+                        float pointx = m_instance_t[i].x;
+                        //float pointx = m_instance_t[i].x + ((trans.x - m_instance_t[i].x) * 0.01f);
+                        //if (pointy < -5.0f) { pointy = 5.0f; m_fall_time[i] = 0; pointx = m_def_p[i]; }
+                        m_instance_t[i] = new Vector3(pointx, pointy, 1.0f);
+                    }
+                }
+                if (SceneManager.GetActiveScene().name == "ClearScene")
+                {
+                    trans = bob.transform.position;
+                    for (int i = r.begin; i < r.end; i++)
+                    {
+                        m_fall_time[i] += 4.0f * Time.deltaTime;
+                        float pointy = m_instance_t[i].y - m_instance_time[i] * m_fall_time[i];
+                        float pointx = m_instance_t[i].x;
+                        //float pointx = m_instance_t[i].x + ((trans.x - m_instance_t[i].x) * 0.01f);
+                        //if (pointy < -5.0f) { pointy = 5.0f; m_fall_time[i] = 0; pointx = m_def_p[i]; }
+                        m_instance_t[i] = new Vector3(pointx, pointy, 1.0f);
+                    }
                 }
                 break;
             case 2:
