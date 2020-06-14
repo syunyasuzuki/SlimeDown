@@ -26,7 +26,7 @@ public class Clear : MonoBehaviour {
         player = col.gameObject.name;
 
         //当たったオブジェクトがプレイヤーの場合
-        if (player == "slime(Clone)")
+        if (player == "slime")
         {
             //マップ変更
             mp += 1;

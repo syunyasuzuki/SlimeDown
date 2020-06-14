@@ -12,7 +12,7 @@ public class Stage_Logo_ctr : MonoBehaviour
     void Start()
     {
         x = 10.0f;
-        transform.position = new Vector3(x, 0.0f, 0.0f);
+        transform.position = new Vector3(-1.5f + x, -4.5f, 0.0f);
         Logo_Back_Check = false;
     }
 
@@ -35,7 +35,7 @@ public class Stage_Logo_ctr : MonoBehaviour
                 Logo_Back_Check = false;
                 Logo_Back_ctr.Stage_Check = false;
             }
-            transform.position = new Vector3(x, 0.0f, 0.0f);
+            transform.position = new Vector3(-1.5f + x, -4.5f, 0.0f);
         }
     }
 }

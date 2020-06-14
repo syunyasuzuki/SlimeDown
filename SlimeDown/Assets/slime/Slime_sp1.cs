@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Slime_sp1 : MonoBehaviour {
 
@@ -145,13 +146,20 @@ public class Slime_sp1 : MonoBehaviour {
         local_py = ny;
     }
 
-    void Awake () {
+    void Awake()
+    {
+        gameObject.name = "slime";
+        GameObject cam = GameObject.Find("Main Camera");
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            cam.GetComponent<camera_2c>().Set_cam();
+        }
         sr = GetComponent<SpriteRenderer>();
         bo2 = GetComponent<BoxCollider2D>();
         rid2 = GetComponent<Rigidbody2D>();
     }
 
-	void Start () {
+    void Start () {
 		
 	}
 	

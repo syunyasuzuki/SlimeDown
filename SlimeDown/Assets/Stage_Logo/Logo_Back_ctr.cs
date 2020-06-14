@@ -22,6 +22,8 @@ public class Logo_Back_ctr : MonoBehaviour
         scale_x = 0.0f;
         scale_y = 0.1f;
 
+        transform.position = new Vector3(-1.5f, -4.5f, 0.0f);
+
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, alpha);
         transform.localScale = new Vector2(scale_x, scale_y);
 	}
