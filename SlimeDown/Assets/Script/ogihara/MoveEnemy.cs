@@ -25,8 +25,7 @@ public class MoveEnemy : MonoBehaviour {
     }
     void Hit()
     {
-        player.GetComponent<Slime_sp1>();
-        Set_Helthpoint(EnemyHP);//プレイヤー側に自分の体力を渡す
+        player.GetComponent<Slime_sp1>().Set_Helthpoint(EnemyHP);
         //自分が死ぬ処理
         Destroy(this.gameObject);
     }
